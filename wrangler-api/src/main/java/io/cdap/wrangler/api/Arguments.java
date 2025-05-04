@@ -2,16 +2,16 @@
  *  Copyright © 2017-2019 Cask Data, Inc.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not
- *  use this file except in compliance with the License. You may obtain a copy of
- *  the License at
+ *  use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
  *
  *  http://www.apache.org/licenses/LICENSE-2.0
  *
  *  Unless required by applicable law or agreed to in writing, software
  *  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  *  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- *  License for the specific language governing permissions and limitations under
- *  the License.
+ *  License for the specific language governing permissions and limitations
+ * under the License.
  */
 
 package io.cdap.wrangler.api;
@@ -51,14 +51,16 @@ public interface Arguments {
    * Returns the number of tokens that are mapped to arguments.
    *
    * <p>The optional arguments specified during the <code>UsageDefinition</code>
-   * are not included in the size if they are not present in the tokens parsed.</p>
+   * are not included in the size if they are not present in the tokens 
+   * parsed.</p>
    *
    * @return number of tokens parsed, excluding optional tokens if not present.
    */
   int size();
 
   /**
-   * This method checks if there exists a token named <code>name</code> registered
+   * This method checks if there exists a token named <code>
+   * name</code> registered
    * with this object.
    *
    * The <code>name</code> is expected to the same as specified in the <code>UsageDefinition</code>.

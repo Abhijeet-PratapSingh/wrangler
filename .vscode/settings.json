@@ -1,0 +1,12 @@
+{
+    "java.checkstyle.configuration": "${workspaceFolder}\\checkstyle.xml",
+    "java.checkstyle.version": "2.17",
+    "files.trimTrailingWhitespace": true,
+    "[java]": {
+  "editor.rulers": [80]  // Sets a ruler at 80 characters to visualize line length
+},
+"java.configuration.updateBuildConfiguration": "automatic"
+
+
+
+}

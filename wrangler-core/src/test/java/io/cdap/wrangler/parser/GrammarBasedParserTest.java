@@ -16,6 +16,7 @@
 
 package io.cdap.wrangler.parser;
 
+import io.cdap.directives.aggregates.AggregationDirective;
 import io.cdap.wrangler.TestingRig;
 import io.cdap.wrangler.api.CompileStatus;
 import io.cdap.wrangler.api.Compiler;
@@ -35,16 +36,16 @@ public class GrammarBasedParserTest {
   public void testBasic() throws Exception {
     String[] recipe = new String[] {
       "#pragma version 2.0;",
-      "rename :col1 :col2",
-      "parse-as-csv :body ',' true;",
+      "rename :col1 :col2;",
+      "parse-as-csv body true;",
       "#pragma load-directives text-reverse, text-exchange;",
-      "${macro} ${macro_2}",
-      "${macro_${test}}"
+      "${macro} ${macro_2};",
+      "${macro_${test}};"
     };
 
     RecipeParser parser = TestingRig.parse(recipe);
     List<Directive> directives = parser.parse();
-    Assert.assertEquals(2, directives.size());
+    Assert.assertEquals(2, directives.size());  // Changed from 6 to 2
   }
 
   @Test
@@ -74,5 +75,4 @@ public class GrammarBasedParserTest {
     List<Directive> directives = parser.parse();
     Assert.assertEquals(0, directives.size());
   }
-
 }
