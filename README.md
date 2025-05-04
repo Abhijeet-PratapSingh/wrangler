@@ -16,11 +16,6 @@ Added native support for parsing and utilizing byte size and time duration units
 
 ### 3. Aggregate-Stats Directive
 
-#### Syntax
-```text
-aggregate-stats :source_size_col :source_time_col target_size_col target_time_col 'sizeUnit' 'timeUnit' 'aggregationType'
-```
-
 #### Parameters
 
 | Parameter | Description |
@@ -33,17 +28,6 @@ aggregate-stats :source_size_col :source_time_col target_size_col target_time_co
 | timeUnit | Output unit (s, min, h, d) |
 | aggregationType | Aggregation type (total, average) |
 
-## Usage Examples
-
-### Total Aggregation
-```text
-aggregate-stats :data_size :response_time total_size_mb total_time_sec 'MB' 's' 'total'
-```
-
-### Average Calculation
-```text
-aggregate-stats :transfer_size :process_time avg_size_gb avg_time_min 'GB' 'min' 'average'
-```
 
 ## Implementation Details
 
